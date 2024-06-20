@@ -14,12 +14,40 @@
 			}
 			
 			.logo {
-				position: absolute; 
-				top: 10%; 
-				left: 00%;
-				width: 100%;
+				//position: absolute; 
+				//top: 10%; 
+				//left: 00%;
+				//width: 100%;
+				position: absolute;
+				top: 5%;
+				width: 90%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, 0%);
 			}
 			
+			.showname {
+				position: absolute;
+				bottom: 10%;
+				width: 70%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, 0%);
+			}
+			
+			.clock {
+				font-kerning: auto; 
+				position: absolute; 
+				top: 50%; 
+				left: 50%; 
+				transform: translate(-50%, -50%);
+				color: red;
+				min-width: 50vw;
+			}
+			
+			#clocktext {
+				font-size: 20vw;
+			}
 			
 			
 		</style>
@@ -30,18 +58,21 @@
 		<img class="logo" src="./images/TCP.png" />
 		
 		
-		<span id="clocktext" style="font-kerning: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">2:46:47&nbsp;am</span>
+		<div class="clock">
+			<span id="clocktext">2:46:47&nbsp;am</span>
+		</div>
 		
 		
-		
-		
+		<div class="showname">
+			<img class="showname" src="./images/SARALANDRY.png" />
+		</div>
 
 		<script>
 			"use strict";
 			
 			let textElem = document.getElementById("clocktext");
 			const targetWidth = 0.8;  // Proportion of full screen width
-			let curFontSize = 20;  // Do not change
+			let curFontSize = 500;  // Do not change
 			
 			function updateClock() {
 				const d = new Date();
@@ -62,7 +93,7 @@
 			}
 			
 			updateClock();
-			updateTextSize();
+			//updateTextSize();
 			//window.addEventListener("resize", updateTextSize);
 		</script>
 	
